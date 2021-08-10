@@ -18,14 +18,9 @@ Download Genome Workbench at http://archive-dtd.ncbi.nlm.nih.gov/projects/gbench
 2. Download https://github.com/enasequence/enaBrowserTools **needs python installed**
 3.
 **For data-holding accessions such as Sequence records, Assembly records, Run or Analysis records or WGS sets**
->Enter: >enaDataGet -f sra -d <destination/directory> *e.g. run accession from ENA*
+>Enter: >enaDataGet -f fastq -d <destination/directory> *e.g. run accession from ENA*
 
 **To download all data files of a certain type of Record that are associated with a Study, Sample or given Taxon**
 >Enter: >enaGroupGet -f submitted -d <destination/directory> *e.g. sample accession*
 
-4. Convert file from sra format to bai with Samtools:
->samtools view thing.sam > thing.bam
-
->samtools sort thing.bam thing
-
->samtools index thing.bam
+4. Convert file from fastq to bam using https://sequencing.com/fastq2bam-conversion
