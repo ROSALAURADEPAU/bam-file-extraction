@@ -15,3 +15,17 @@ Download Genome Workbench at http://archive-dtd.ncbi.nlm.nih.gov/projects/gbench
 
 # Bam/bai file extraction from ENA
 1. Access https://www.ebi.ac.uk/ena/browser/home
+2. Download https://github.com/enasequence/enaBrowserTools **needs python installed**
+3.
+**For data-holding accessions such as Sequence records, Assembly records, Run or Analysis records or WGS sets**
+>Enter: >enaDataGet -f sra -d <destination/directory> *e.g. run accession from ENA*
+
+**To download all data files of a certain type of Record that are associated with a Study, Sample or given Taxon**
+>Enter: >enaGroupGet -f submitted -d <destination/directory> *e.g. sample accession*
+
+4. Convert file from sra format to bai with Samtools:
+>samtools view thing.sam > thing.bam
+
+>samtools sort thing.bam thing
+
+>samtools index thing.bam
